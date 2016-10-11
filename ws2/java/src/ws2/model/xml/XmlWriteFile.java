@@ -27,11 +27,9 @@ public class XmlWriteFile {
 
 
 			//to generate a file output use fileoutputstream instead of system.out
-			XMLSerializer serializer = new XMLSerializer(
-			new FileOutputStream(new File(fileUri)), format);
-
+			XMLSerializer serializer = new XMLSerializer(new FileOutputStream(new File(fileUri)), format);
 			serializer.serialize(domDoc);
-
+			
 		} catch(IOException ie) {
 		    ie.printStackTrace();
 		}

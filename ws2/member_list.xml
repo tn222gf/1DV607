@@ -10,14 +10,14 @@
                 <Length>6</Length>
             </Boat>
             <Boat>
-                <Type>Motorboat</Type>
+                <Type>Motorsailer</Type>
                 <Length>5</Length>
             </Boat>
         </Boats>
     </Member>
     <Member>
         <Id>2</Id>
-        <Name>Per Andersson</Name>
+        <Name>Egon Bertilsson</Name>
         <PersonalNumber>600210-3365</PersonalNumber>
         <Boats>
             <Boat>
@@ -34,6 +34,17 @@
             <Boat>
                 <Type>Sailboat</Type>
                 <Length>5</Length>
+            </Boat>
+        </Boats>
+    </Member>
+    <Member>
+        <Id>696</Id>
+        <Name>Tobias Nilsson</Name>
+        <PersonalNumber>60082-4999</PersonalNumber>
+        <Boats>
+            <Boat>
+                <Type>motorsailer</Type>
+                <Length>10</Length>
             </Boat>
         </Boats>
     </Member>

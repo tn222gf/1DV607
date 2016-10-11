@@ -11,7 +11,7 @@ public class StartSystem {
 		// Initiates our cli-based application
 		User user = new User();
 		Console view = new Console();
-		Crud model = new Crud("./src/ws2/data/member_list.xml");
+		Crud model = new Crud("member_list.xml");
 		
 		user.CrudApplication(view, model);
 		

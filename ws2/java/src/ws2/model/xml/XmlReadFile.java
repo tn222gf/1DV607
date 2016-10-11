@@ -24,7 +24,7 @@ public class XmlReadFile {
 
 			//parse using builder to get DOM representation of the XML file
 			domDoc = db.parse(fileUri);
-
+			
 
 		} catch(ParserConfigurationException pce) {
 			pce.printStackTrace();
