@@ -1,8 +1,11 @@
 package ws2.controller;
 
+import ws2.model.Crud;
+import ws2.view.Console;
+
 public class User {
 	
-	public void CrudApplication(ws2.view.Console a_view, ws2.model.Crud a_crud) {
+	public void CrudApplication(Console a_view, Crud a_crud) {
 		
 		// integer which allows memory of current member being changed
 		int id;

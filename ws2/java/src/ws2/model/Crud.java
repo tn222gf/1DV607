@@ -103,9 +103,9 @@ public class Crud {
 		return sb.toString();
 	}
 
-	// int id, String name, String pNumber, ArrayList<Boat> boats
+	// int id, String name, String pNumber
 	public void createMember(String[] values) {
-		m_listOfMembers.add(new Member(createId(), values[0], values[1], new ArrayList<Boat>()));
+		m_listOfMembers.add(new Member(createId(), values[0], values[1]));
 		writeMembersData();
 	}
 	
@@ -164,6 +164,7 @@ public class Crud {
 		writeMembersData();
 	}
 	
+	// Changed so Removes/changes/creates a boat metods to member which has the information (17/10).
 	// Removes/changes/creates a boat
 	public void changeBoat(int memId, int boatId, String attribute, String[] change) {
 
@@ -174,15 +175,15 @@ public class Crud {
 				switch (attribute) {
 				case "create":
 					
-					m_listOfMembers.get(i).getBoats().add(new Boat(change[0], Integer.parseInt(change[1])));
+					m_listOfMembers.get(i).createBoat(change[0], Integer.parseInt(change[1]));
 					break;
 					
 				case "remove":
-					m_listOfMembers.get(i).getBoats().remove(boatId);
+					m_listOfMembers.get(i).removeBoat(boatId);
 					break;
 					
 				case "change":
-					m_listOfMembers.get(i).getBoats().set(boatId, (new Boat(change[0], Integer.parseInt(change[1]))));
+					m_listOfMembers.get(i).changeBoat(boatId, change[0], Integer.parseInt(change[1]));
 					break;
 				}
 				

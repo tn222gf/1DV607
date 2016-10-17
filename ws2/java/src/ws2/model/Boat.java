@@ -5,9 +5,9 @@ public class Boat {
 	private String m_type;
 	private int m_length;
 	
-	public Boat(String bType, int blength) {
+	public Boat(String bType, int bLength) {
 		m_type = bType;
-		m_length = blength;
+		m_length = bLength;
 	}
 	
 	public String getType() {
