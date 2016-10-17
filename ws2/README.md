@@ -12,6 +12,7 @@ Creating create/remove/change boat metods in the Member class and removeing this
 
 #### Sequence diagrams
   * Changing create member diagram
+  * Changing view member diagram
 
 ### Passing grade
 ![alt text](https://github.com/tn222gf/1DV607/blob/master/ws2/ws2_ClassDiagram_passing_tn222gf.png "ws2 class diagram first submission")
