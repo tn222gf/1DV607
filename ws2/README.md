@@ -6,8 +6,8 @@ Make sure to have memberList.xml in same folder
 #### Code
 
 #### Class diagram
-  Removing dependency to member_list.XML, which has been moved out from model package to source folder.
-  Adding dependency arrows from classes in the xml package to member and boat, dependencys which was forgotten.
+  * Removing dependency to member_list.XML, which has been moved out from model package to source folder.
+  * Adding dependency arrows from classes in the xml package to member and boat, dependencys which was forgotten.
 
 ### Passing grade first submission
 ![alt text](https://github.com/tn222gf/1DV607/blob/master/ws2/ws2_ClassDiagram_passing_tn222gf.png "ws2 class diagram first submission")
