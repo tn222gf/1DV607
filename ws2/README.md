@@ -10,6 +10,9 @@ Creating create/remove/change boat metods in the Member class and removeing this
   * Removing dependency to member_list.XML, which has been moved out from model package to source folder.
   * Adding dependency arrows from classes in the xml package to member and boat, dependencys which was forgotten.
 
+#### Sequence diagrams
+  * Changing create member diagram
+
 ### Passing grade
 ![alt text](https://github.com/tn222gf/1DV607/blob/master/ws2/ws2_ClassDiagram_passing_tn222gf.png "ws2 class diagram first submission")
 ![alt text](https://github.com/tn222gf/1DV607/blob/master/ws2/ws2_seqDiagram_passingGrade_tn222gf.png "ws2 sequence diagram first submission")
