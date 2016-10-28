@@ -41,6 +41,17 @@ public class SwedishView implements IView
                 System.out.println("" + colors[a_card.GetColor().ordinal()] + " " + values[a_card.GetValue().ordinal()]);
             }
         }
+        
+        public void DisplayPlayerCard(BlackJack.model.Card a_card)
+        {
+            System.out.println("Spelare drog: " + a_card.GetColor() + " " + a_card.GetValue() + "\n");
+        }
+        
+        public void DisplayDealerCard(BlackJack.model.Card a_card)
+        {
+            System.out.println("Croupier drog: " + a_card.GetColor() + " " + a_card.GetValue() + "\n");
+        }
+        
         public void DisplayPlayerHand(Iterable<BlackJack.model.Card> a_hand, int a_score)
         {
             DisplayHand("Spelare", a_hand, a_score);
@@ -49,17 +60,17 @@ public class SwedishView implements IView
         {
             DisplayHand("Croupier", a_hand, a_score);
         }
-        public void DisplayGameOver(boolean a_dealerIsWinner)
+        
+        public void DisplayGameOverDealerWin()
         {
-            System.out.println("Slut: ");
-            if (a_dealerIsWinner)
-            {
-                System.out.println("Croupiern Vann!");
-            }
-            else
-            {
-                System.out.println("Du vann!");
-            }
+        	System.out.println("Slut: ");
+        	System.out.println("Croupiern Vann!");
+        }
+        
+        public void DisplayGameOverPlayerWin()
+        {
+        	System.out.println("Slut: ");
+        	System.out.println("Du vann!");
         }
 
         private void DisplayHand(String a_name, Iterable<BlackJack.model.Card> a_hand, int a_score)
