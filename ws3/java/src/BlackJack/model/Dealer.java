@@ -50,7 +50,7 @@ public class Dealer extends Player {
 		  return false;
 	  }
 
-	  return m_winDeciderRule.WhoWins(this, a_player);
+	  return m_winDeciderRule.IsDealerWinner(this, a_player);
   }
 
   public boolean IsGameOver() {

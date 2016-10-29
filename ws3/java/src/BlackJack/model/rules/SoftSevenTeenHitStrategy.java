@@ -8,13 +8,20 @@ public class SoftSevenTeenHitStrategy implements IHitStrategy {
 
     public boolean DoHit(Player a_dealer) {
     	
+    	int aceCount = 0;
+    	
     	if (a_dealer.CalcScore() == g_hitLimit) {
     		
     		for(Card c : a_dealer.GetHand()) {
     			if (c.GetValue() == Card.Value.Ace) {
-    				return true;
+    				aceCount++;
     			}
     		}	
+    		
+    		// Makes sure that the dealer only soft 17 hit rule occure once
+    		if (aceCount == 1) {
+    			return true;
+    		}
     	}
     	
     	return a_dealer.CalcScore() < g_hitLimit;  
