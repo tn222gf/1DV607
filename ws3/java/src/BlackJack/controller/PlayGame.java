@@ -1,7 +1,6 @@
 package BlackJack.controller;
 
 import BlackJack.view.IView;
-import BlackJack.model.Card;
 import BlackJack.model.Game;
 import BlackJack.model.ICardDealtObserver;
 
@@ -51,24 +50,8 @@ public class PlayGame implements ICardDealtObserver {
 		return input != 'q';
 	}
 
-	public void CardDealt(Card a_addToHand, String name) {
-		try {
-			Thread.sleep(300);
-		} catch (Exception e) {
-
-		}
-		
-		if (name.equals("Player")) {
-			m_view.DisplayPlayerCard(a_addToHand);
-		} else if (name.equals("Dealer")) {
-			m_view.DisplayDealerCard(a_addToHand);
-		}
-		
-		try {
-			Thread.sleep(1500);
-		} catch (Exception e) {
-
-		}
+	public void CardDealt() {
+		m_view.DisplayWhenNewCard(m_game.GetDealerHand(), m_game.GetDealerScore(), m_game.GetPlayerHand(), m_game.GetPlayerScore());
 	}
 
 }

@@ -1,5 +1,7 @@
 package BlackJack.view;
 
+import BlackJack.model.Card;
+
 public interface IView
 {
   void DisplayWelcomeMessage();
@@ -11,4 +13,6 @@ public interface IView
   void DisplayDealerHand(Iterable<BlackJack.model.Card> a_hand, int a_score);
   void DisplayGameOverDealerWin();
   void DisplayGameOverPlayerWin();
+  void DisplayWhenNewCard(Iterable<Card> a_dealerHand, int a_dealerScore, Iterable<Card> a_playerHand, int a_playerScore);
+  
 }

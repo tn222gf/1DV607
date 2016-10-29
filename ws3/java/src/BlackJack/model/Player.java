@@ -20,7 +20,7 @@ public class Player {
   {
     m_hand.add(a_addToHand);
     for(ICardDealtObserver obs : m_subscribers) {
-    	obs.CardDealt(a_addToHand, this.getClass().getSimpleName());
+    	obs.CardDealt();
     }
   }
   
