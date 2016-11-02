@@ -5,7 +5,7 @@ import BlackJack.model.Card;
 public interface IView
 {
   void DisplayWelcomeMessage();
-  int GetInput();
+  public Commands GetInput();
   void DisplayCard(Card a_card);
   void DisplayPlayerCard(Card a_card);
   void DisplayDealerCard(Card a_card);

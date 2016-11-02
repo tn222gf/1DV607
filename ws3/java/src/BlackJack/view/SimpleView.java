@@ -27,9 +27,35 @@ public class SimpleView implements IView
 		System.out.println("Type 'p' to Play, 'h' to Hit, 's' to Stand or 'q' to Quit\n");
 	}
 
-	public int GetInput()
+	public Commands GetInput()
 	{
-		return getInputChar();
+		int input;
+		boolean isCommand = false;
+		Commands com = null;
+		
+		while (!isCommand) {
+			
+			input = getInputChar();
+			
+			if (input == 'p') {
+				com = Commands.Play;
+				isCommand = true;
+				
+			} else if (input == 'h') {
+				com = Commands.Hit;
+				isCommand = true;
+				
+			} else if (input == 's') {
+				com = Commands.Stand;
+				isCommand = true;
+				
+			} else if (input == 'q') {
+				com = Commands.Quit;
+				isCommand = true;
+			}	
+		}
+		
+		return com; 
 	}
 
 	protected int getInputChar() {

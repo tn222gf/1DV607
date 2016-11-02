@@ -1,5 +1,6 @@
 package BlackJack.controller;
 
+import BlackJack.view.Commands;
 import BlackJack.view.IView;
 import BlackJack.model.Game;
 import BlackJack.model.ICardDealtObserver;
@@ -32,22 +33,26 @@ public class PlayGame implements ICardDealtObserver {
 
 		}
 
-		int input = m_view.GetInput();
+		Commands com = m_view.GetInput();
 
-		if (input == 'p')
+		if (com == Commands.Play)
 		{
 			m_game.NewGame();
 		}
-		else if (input == 'h')
+		else if (com == Commands.Hit)
 		{
 			m_game.Hit();
 		}
-		else if (input == 's')
+		else if (com == Commands.Stand)
 		{
 			m_game.Stand();
 		}
-
-		return input != 'q';
+		else if (com == Commands.Quit)
+		{
+			return false;
+		}
+		
+		return true;
 	}
 
 	public void CardDealt() {

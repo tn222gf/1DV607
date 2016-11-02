@@ -45,6 +45,8 @@ public class Dealer extends Player {
 
   public boolean IsDealerWinner(Player a_player) {
     
+	  // Basic rule if player got more than 21 the player automatically lose
+	  // If not and the dealer got more than 21 the dealer automatically lose
 	  if (a_player.CalcScore() > g_maxScore) {
 		  return true;
 	  } else if (CalcScore() > g_maxScore) {
